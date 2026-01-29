@@ -1,0 +1,118 @@
+/* Main container for the Home component (wraps Overview + Transactions) */
+.home-container {
+  display: flex;  /* use flexbox for layout */
+  flex-direction: column;  /* stack children vertically */
+  align-items: center;  /* center content horizontally */
+  justify-content: flex-start; /* align content to the top */
+  width: 100%; /* take full width of parent */
+  max-width: 500px; /* limit width for better readability */
+  padding: 10px; /* inner spacing */
+  font-family: "Montserrat", sans-serif; /* clean modern font */
+  box-sizing: border-box; /* include padding/border in total size */
+  margin: 0 auto;  /* center container horizontally */
+
+}
+
+/* Tablet view — screens between 769px and 1024px wide */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .home-container {
+    max-width: 80%; /* make container slightly wider */
+    padding: 16px; /* add more inner space */
+  }
+  body{
+    min-height: 100vh; /* ensure full viewport height */
+    margin: auto;  /* center vertically and horizontally if possible */
+    
+  }
+
+  .expense-container {
+    
+    gap: 10px; /* small space between items */
+    width: 100%; /* take full width */
+  }
+  
+
+  .balance-box {
+    flex-direction: row; /* arrange items in a row */
+    align-items: center; /* center items vertically */
+    gap: 20px;  /* space between elements */
+  }
+}
+
+/*  Mobile & small tablet view (below 768px width) */
+@media (max-width: 768px) {
+  .home-container {
+    width: 95%; /* almost full width */
+    max-width: 90%; /* slightly reduce max width */
+    padding: 12px; /* adjust inner spacing */
+    height: auto; /* allow height to grow naturally */
+  }
+
+  body{
+    min-height: 100dvh; /* full viewport height on mobile */
+    max-height: 200vh;  /* allow extra height if needed */
+    margin: auto; /* center the body content */
+    /* margin-bottom: 280px;  optional extra space */
+    
+  }
+
+
+  .balance-box {
+    flex-direction: column; /* stack elements vertically */
+    align-items: flex-start; /* align items to the left */
+    gap: 10px; /* small space between items */
+  }
+
+  .expense-container {
+    flex-direction: column; /* stack expense boxes vertically */
+    gap: 10px; /* space between them */
+    width: 100%; /* use full width */
+  }
+
+  .expense-box {
+    width: 100%; /* make each box full width */
+  }
+
+  .add-trxn-container {
+    width: 100%; /* make add transaction section full width */
+  }
+
+  .transaction-container input {
+    width: 100%;  /* make input fields stretch full width */
+  }
+
+  .cell {
+    flex-direction: column; /* stack elements vertically */
+    align-items: flex-start; /* align to the left */
+  }
+
+  .header {
+    font-size: 24px; /* slightly smaller heading */
+  }
+}
+
+/*  Extra small phones (below 480px) */
+@media (max-width: 480px) {
+  .header {
+    font-size: 25px; /* adjust header font size for small screens */
+  }
+
+  .balance-box {
+    font-size: 16px; /* make text smaller for readability */
+  }
+
+   .home-container {
+    width: 95%;  /* nearly full width */
+    max-width: 90%;  /* keep within safe bounds */
+    padding: 12px;  /* balanced spacing */
+    height: auto; /* let content define height */
+  }
+
+  body{
+    min-height: 100dvh; /* full device height */
+    max-height: 200vh; /* allow for scrolling if needed */
+    margin: auto; /* center body content */  
+  }
+
+}
+

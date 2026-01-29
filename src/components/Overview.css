@@ -1,0 +1,98 @@
+/*  Overall container for Overview section (balance + income + expense boxes) */
+.over-container {
+  display: flex;  /* use flexbox layout */
+  flex-direction: column;  /* stack elements vertically */
+  align-items: center;  /* center content horizontally */
+  margin: 10px;  /* space around the section */
+  font-family: montserrat; /* use Montserrat font */
+  width: 100%; /* take full width of parent container */
+}
+
+
+/* Box that shows Balance + ADD button side by side */
+.balance-box {
+  display: flex; /* flexbox  for horizontal layout */
+  flex-direction: row;  /* arrange items in a row */
+  justify-content: space-between; /* put space between elements */
+  align-items: center; /* vertically align items */
+  font-size: 21px;  /* base text size */
+  font-weight: bold;  /* make text bold */
+  width: 100%;    /* full width */
+  color: rgb(168, 92, 48);  /* brownish text color */
+  margin-bottom: 10px; /* space below the box */
+}
+
+
+/* “ADD / CANCEL” Button styling */
+.add-transaction-btn {
+  background:rgb(47 111 66); /* green background color */
+  border: none; /* remove border */
+  color: white; /* remove border */
+  padding: 5px 10px; /* inner spacing */
+  border-radius: 4px; /* slightly rounded corners */
+  cursor: pointer; /* show pointer on hover */
+  font-weight: bold; /* bold text */
+  font-size: 18px; /* slightly large text */
+  text-align: center; /* center text inside button */
+}
+
+
+/*  Container for Expense and Income boxes (side by side) */
+.expense-container {
+  display: flex; /* flex layout for side-by-side boxes */
+  justify-content: space-between; /* evenly space the boxes */
+  width: 100%; /* take full available width */
+  margin-top: 20px; /* space above the container */
+}
+
+
+/* Individual Expense / Income box */
+.expense-box{
+    display: flex; /* flex layout for vertical alignment */
+    flex-direction: column; /* stack text inside vertically */
+    border-radius: 4px; /* slightly rounded edges */
+    border: 1px solid #429f57; /* thin green border */
+    padding: 15px 20px; /* inner spacing */
+    width: 135px; /* fixed box width */
+    font-size: 18px;  /* text size inside box */
+}
+
+
+/* Make amount text (inside each box) bold and bigger */
+.expense-box span {
+  font-weight: normal; /* normal weight text */
+  font-size: 20px; /* slightly larger text for amount */
+}
+
+/*  Text color for income amount (green) */
+.expense-box.income span {
+  color: green;
+}
+
+/*  Text color for expense amount (red) */
+.expense-box.expense span {
+  color: red;
+}
+
+
+/*  Responsive Design — Tablet screens (below 768px width) */
+@media (max-width: 768px) {
+  .add-transaction-btn {
+    font-size: 17px; /* slightly smaller font */
+    padding: 5px 10px;  /* adjust button spacing */
+    border-radius: 8px; /* rounder corners */
+    width: 100%;  /* full-width button */
+  }
+}
+
+
+/* Responsive Design — Mobile screens (below 480px width) */
+@media (max-width: 480px) {
+  .add-transaction-btn {
+    font-size: 18px; /* slightly larger font for visibility */
+    padding: 3px 12px;  /* tighter button spacing */
+    width: 100%;    /* full-width button */
+    text-align: center; /* center button text */
+  }
+}
+

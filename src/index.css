@@ -1,0 +1,33 @@
+/* Reset default browser styles for consistency */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center everything perfectly */
+body {
+  display: flex; /* enables flexbox layout */
+  justify-content: center; /* centers content horizontally */
+  align-items: flex-start; /* so content starts from top but stays centered horizontally */
+  min-height: 100vh; /* makes body at least full viewport height */
+  background-color: #8cc4a1; /* light green background color */
+  font-family: "Montserrat", sans-serif; /* clean sans-serif font */
+}
+
+/* Main container */
+.container {
+  width: 100%;   /* takes full available width */
+  max-width: 550px;   /* limits container width */
+  background-color: #fff;  /* white background */
+  margin-top: 80px;    /* spacing from top */
+  margin-bottom: 80px; /* spacing from bottom */
+  padding: 40px 30px;   /* inner spacing */
+  border-radius: 14px;  /* rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);   /* soft shadow for depth */
+  display: flex;    /* flex layout for inner content */
+  flex-direction: column;   /* stacks items vertically */
+  align-items: center;  /* centers inner items horizontally */
+  border: none;   /* removes any border */
+  transition: all 0.3s ease;   /* smooth resize effect or style changes */
+}

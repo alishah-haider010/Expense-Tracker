@@ -1,0 +1,90 @@
+/*  Main container for all transaction items (list + search bar + heading) */
+.transaction-container {
+  display: flex; /* use flexbox layout */
+  flex-direction: column; /* stack items vertically */
+  align-items: flex-start;  /* align content to the left (like Balance section) */
+  font-family: 'Montserrat', sans-serif; /* modern, clean font */
+  padding: 10px 0;   /* vertical padding, no side padding */
+  font-size: 18px; /* base font size */
+  width: 100%;  /* full width of parent */
+  gap: 10px;  /* space between child elements */
+  font-weight: bold; /* make text bold */
+  margin: 0 auto; /* center the container horizontally */
+  max-width: 400px;   /* keep width consistent with upper container */
+}
+
+
+/* Styling for the search input bar */
+.transaction-container input {
+  padding: 10px 14px;  /* comfortable inner spacing */
+  border-radius: 12px;  /* rounded corners */
+  background: #e6e8e9; /* light gray background */
+  border: 1px solid #e6e8e9; /* subtle border matching background */
+  outline: none;  /* remove blue outline on focus */
+  width: 100%;  /* full width input field */
+}
+
+
+/* Single transaction row (each cell) */
+.cell {
+  display: flex;  /* use flexbox for layout */
+  justify-content: space-between;  /* space between text and buttons */
+  align-items: center;  /* vertically center content */
+  width: 100%;  /* take full container width */
+  padding: 12px 18px; /* comfortable inner spacing */
+  font-size: 15px;  /* slightly larger for readability */
+  font-weight: 500; /* medium font weight */
+  border: 1px solid #e6e8e9; /* subtle gray border */
+  border-right: 4px solid transparent; /* right border used for color indicator */
+  border-radius: 6px; /* smooth corners */
+  margin: 6px 0;   /* vertical space between cells */
+  background-color: #fff; /* white background for contrast */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* light shadow for polish */
+}
+
+/* Expense transaction => red color strip on right */
+.cell.expense {
+  border-right-color: red;
+}
+
+/* Income transaction => green color strip on right */
+.cell.income {
+  border-right-color: green;
+}
+
+
+/*  “Transactions” heading style */
+.head {
+  color: rgb(168, 92, 48); /* brownish text color */
+  width: 100%;  /* full width */
+  text-align: left; /* align heading text to the left */
+  margin-bottom: 5px; /* small space below heading */
+  font-size: 21px;  /* slightly larger text */
+}
+
+/*  Delete button (small red cross) */
+.delete-btn {
+  background: none;  /* no background */
+  border: none;   /* no border */
+  color: red;   /* red text/icon color */
+  font-size: 18px;   /* medium size */
+  cursor: pointer;   /* show pointer on hover */
+  margin-left: 10px;  /* space to the left */
+  transition: transform 0.2s ease, color 0.2s ease; /* smooth hover animation */
+}
+
+
+/* Hover effect on delete button */
+.delete-btn:hover {
+  transform: scale(1.2); /* make button slightly larger */
+  color: darkred;  /* darker red on hover */
+}
+
+/* “No transactions found” message styling */
+#para{
+  color: rgb(117, 117, 116);  /* neutral gray color */
+  font-weight: normal;  /* normal text weight */
+  font-size: 16px;  /* standard readable size */
+}
+
+

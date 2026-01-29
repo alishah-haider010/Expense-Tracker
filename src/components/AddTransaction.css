@@ -1,0 +1,51 @@
+/*  Main container for Add Transaction form */
+.add-trxn-container {
+  display: flex;  /* use flexbox layout */
+  flex-direction: column;  /* stack form elements vertically */
+  border: 1px solid #e6e8e9; /* light gray border */
+  border-radius: 10px;  /* smooth rounded corners */
+  width: 100%;  /* take full available width */
+  gap: 10px;  /* space between form elements */
+  padding: 15px 20px;  /* inner spacing for neat layout */
+  margin: 6px;  /* space around the form box */
+  background-color: rgb(209, 209, 145) /* soft yellowish background color */
+}
+
+
+ /* Styling for all input fields inside Add Transaction box */
+.add-trxn-container input{
+    outline: none;  /* remove blue outline on focus */
+    padding: 10px 12px;  /* inner spacing for comfort */
+    border-radius: 4px;  /* slightly rounded edges */
+    border: 1px solid #e6e8e9;  /* subtle light border */
+}
+
+/* Radio button section (Expense / Income) */ 
+ .radio-btn {
+  display: flex; /* use flex layout */
+  flex-direction: row;  /* arrange radio buttons horizontally */
+  width: 100%;  /* full width of form */
+  align-items: center; /* vertically center items */
+  gap: 12px;  /* space between radio buttons and labels */
+}
+
+/* Change color of selected radio button */
+.radio-btn input[type="radio"] {
+  accent-color:  rgb(47 111 66)  /* green accent color for selected radio button */
+}
+
+
+
+/* "Add Transaction" button styling */
+.add-transaction {
+  background: rgb(47 111 66); /* green background color */
+  border: none;  /* remove default border */
+  color: white;   /* white text color */
+  padding: 5px 10px;  /* inner padding */
+  border-radius: 4px;  /* rounded corners */
+  text-align: center; /* center the button text */
+  cursor: pointer;  /* show pointer on hover */
+  font-weight: bold; /* bold text for emphasis */
+  font-size: 15px; /* medium font size */
+}
+
